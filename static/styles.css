@@ -1,0 +1,240 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1500px; /* Even larger width */
+    height: 80vh; /* Increased height */
+    gap: 30px;
+    flex-direction: row; /* Keep chat history on the left and chat box on the right */
+    border-radius: 30px; /* Larger rounded corners for the main container */
+}
+
+/* Chat History Sidebar */
+.chat-history {
+    width: 500px; /* Even wider chat history */
+    background: #181818;
+    padding: 35px;
+    border-radius: 30px 0 0 30px; /* Larger rounded left corners */
+    overflow-y: auto;
+    flex-shrink: 0;
+    max-height: 100%;
+}
+
+/* Chat History Title */
+.chat-history h2 {
+    text-align: center;
+    background: #0078ff;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 32px; /* Increased font size */
+}
+
+/* Chat History List Items */
+.chat-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat-history li {
+    padding: 25px;
+    cursor: pointer;
+    border-radius: 15px; /* Larger rounded corners for list items */
+    transition: background 0.3s;
+    font-size: 28px; /* Even larger font size for better readability */
+}
+
+.chat-history li:hover {
+    background: #333;
+}
+
+/* Chat Container */
+.chat-container {
+    flex: 1;
+    background: #1e1e1e;
+    border-radius: 0 30px 30px 0; /* Larger rounded right corners */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #0078ff;
+    text-align: center;
+    font-size: 50px; /* Significantly larger font size for header */
+    padding: 40px;
+    font-weight: bold;
+    border-radius: 30px 30px 0 0; /* Larger rounded top corners */
+}
+
+/* Chat Messages */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message Styling */
+.chat-message {
+    max-width: 80%;
+    padding: 30px 36px;
+    margin: 20px 0;
+    border-radius: 20px; /* Larger rounded message bubbles */
+    font-size: 28px; /* Larger font size */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #0078ff;
+    color: white;
+    border-radius: 15px 15px 0px 15px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #2b2b2b;
+    color: #d1d1d1;
+    border-radius: 15px 15px 15px 0px;
+}
+
+/* Typing Animation */
+.typing-indicator::after {
+    content: "...";
+    display: inline-block;
+    animation: dots 1s steps(3, end) infinite;
+}
+
+/* Input Section */
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 30px 30px 0 0; /* Larger rounded top corners */
+}
+
+/* Input Field */
+.input-container input {
+    flex: 1;
+    padding: 25px;
+    border: none;
+    border-radius: 18px; /* Larger rounded corners for input field */
+    background: #2a2a2a;
+    color: white;
+    outline: none;
+    font-size: 30px; /* Larger font size for input field */
+}
+
+/* Send Button */
+.input-container button {
+    margin-left: 25px;
+    padding: 25px;
+    background: #0078ff;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Increase size of the send icon */
+.input-container button .send-icon {
+    font-size: 40px; /* Larger icon size */
+}
+
+/* Hover effect for button */
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60% { content: "..."; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+        gap: 30px;
+    }
+    
+    .chat-history {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .chat-container {
+        width: 100%;
+    }
+    
+    .chat-header {
+        font-size: 36px; /* Slightly smaller font for mobile */
+        padding: 30px;
+    }
+
+    .input-container input {
+        font-size: 28px; /* Larger font size for mobile input */
+    }
+    
+    .input-container button {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chat-history {
+        max-height: 250px;
+    }
+
+    .chat-header {
+        font-size: 32px;
+    }
+
+    .input-container input {
+        font-size: 26px;
+    }
+
+    .input-container button {
+        width: 65px;
+        height: 65px;
+    }
+}
