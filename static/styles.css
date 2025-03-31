@@ -14,20 +14,20 @@ body {
 /* Main Container */
 .container {
     display: flex;
-    width: 100%;
-    max-width: 1500px; /* Even larger width */
-    height: 80vh; /* Increased height */
-    gap: 30px;
-    flex-direction: row; /* Keep chat history on the left and chat box on the right */
-    border-radius: 30px; /* Larger rounded corners for the main container */
+    width: 80%; /* Reduced width */
+    max-width: 900px; /* Reduced max-width */
+    height: 90vh;
+    gap: 20px;
+    flex-direction: row;
+    border-radius: 20px;
 }
 
 /* Chat History Sidebar */
 .chat-history {
-    width: 500px; /* Even wider chat history */
+    width: 250px;
     background: #181818;
-    padding: 35px;
-    border-radius: 30px 0 0 30px; /* Larger rounded left corners */
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
     overflow-y: auto;
     flex-shrink: 0;
     max-height: 100%;
@@ -37,9 +37,9 @@ body {
 .chat-history h2 {
     text-align: center;
     background: #0078ff;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 32px; /* Increased font size */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 22px;
 }
 
 /* Chat History List Items */
@@ -50,11 +50,11 @@ body {
 }
 
 .chat-history li {
-    padding: 25px;
+    padding: 15px;
     cursor: pointer;
-    border-radius: 15px; /* Larger rounded corners for list items */
+    border-radius: 10px;
     transition: background 0.3s;
-    font-size: 28px; /* Even larger font size for better readability */
+    font-size: 18px;
 }
 
 .chat-history li:hover {
@@ -65,7 +65,7 @@ body {
 .chat-container {
     flex: 1;
     background: #1e1e1e;
-    border-radius: 0 30px 30px 0; /* Larger rounded right corners */
+    border-radius: 0 20px 20px 0;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -76,28 +76,28 @@ body {
 .chat-header {
     background: #0078ff;
     text-align: center;
-    font-size: 50px; /* Significantly larger font size for header */
-    padding: 40px;
+    font-size: 30px;
+    padding: 20px;
     font-weight: bold;
-    border-radius: 30px 30px 0 0; /* Larger rounded top corners */
+    border-radius: 20px 20px 0 0;
 }
 
 /* Chat Messages */
 .chat-box {
     flex-grow: 1;
     overflow-y: auto;
-    padding: 35px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
 /* Message Styling */
 .chat-message {
-    max-width: 80%;
-    padding: 30px 36px;
-    margin: 20px 0;
-    border-radius: 20px; /* Larger rounded message bubbles */
-    font-size: 28px; /* Larger font size */
+    max-width: 75%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-size: 18px;
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -105,14 +105,14 @@ body {
     align-self: flex-end;
     background: #0078ff;
     color: white;
-    border-radius: 15px 15px 0px 15px;
+    border-radius: 12px 12px 0 12px;
 }
 
 .bot-message {
     align-self: flex-start;
     background: #2b2b2b;
     color: #d1d1d1;
-    border-radius: 15px 15px 15px 0px;
+    border-radius: 12px 12px 12px 0;
 }
 
 /* Typing Animation */
@@ -126,34 +126,34 @@ body {
 .input-container {
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 15px;
     background: #1a1a1a;
-    border-radius: 30px 30px 0 0; /* Larger rounded top corners */
+    border-radius: 0 0 20px 20px;
 }
 
 /* Input Field */
 .input-container input {
     flex: 1;
-    padding: 25px;
+    padding: 12px;
     border: none;
-    border-radius: 18px; /* Larger rounded corners for input field */
+    border-radius: 10px;
     background: #2a2a2a;
     color: white;
     outline: none;
-    font-size: 30px; /* Larger font size for input field */
+    font-size: 16px;
 }
 
 /* Send Button */
 .input-container button {
-    margin-left: 25px;
-    padding: 25px;
+    margin-left: 15px;
+    padding: 12px;
     background: #0078ff;
     border: none;
     border-radius: 50%;
     color: white;
     cursor: pointer;
-    width: 75px;
-    height: 75px;
+    width: 45px;
+    height: 45px;
     transition: background-color 0.3s ease;
     display: flex;
     justify-content: center;
@@ -162,14 +162,13 @@ body {
 
 /* Increase size of the send icon */
 .input-container button .send-icon {
-    font-size: 40px; /* Larger icon size */
+    font-size: 20px;
 }
 
 /* Hover effect for button */
 .input-container button:hover {
     background-color: #0056b3;
 }
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -188,12 +187,12 @@ body {
     .container {
         flex-direction: column;
         height: 100%;
-        gap: 30px;
+        gap: 15px;
     }
     
     .chat-history {
         width: 100%;
-        max-height: 250px;
+        max-height: 200px;
     }
 
     .chat-container {
@@ -201,17 +200,17 @@ body {
     }
     
     .chat-header {
-        font-size: 36px; /* Slightly smaller font for mobile */
-        padding: 30px;
+        font-size: 24px;
+        padding: 15px;
     }
 
     .input-container input {
-        font-size: 28px; /* Larger font size for mobile input */
+        font-size: 16px;
     }
     
     .input-container button {
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -222,19 +221,19 @@ body {
     }
 
     .chat-history {
-        max-height: 250px;
+        max-height: 200px;
     }
 
     .chat-header {
-        font-size: 32px;
+        font-size: 22px;
     }
 
     .input-container input {
-        font-size: 26px;
+        font-size: 14px;
     }
 
     .input-container button {
-        width: 65px;
-        height: 65px;
+        width: 35px;
+        height: 35px;
     }
 }
