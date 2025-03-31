@@ -2,6 +2,8 @@
 
 Phoenix AI Chatbot is an interactive AI-powered chatbot that leverages OpenAI's language models to answer user queries, provide general knowledge (GK) facts, and engage in meaningful conversations. The chatbot can store and load previous conversations, providing a personalized experience. With an intuitive and modern interface, users can easily communicate with the bot and explore a range of functionalities such as quizzes, image analysis, and more.
 
+## Live Demo
+[Click here to access the chatbot](https://ai-chatbot-3knb.onrender.com/)
 ## Features
 
 - **Interactive Chat Interface**: Engage with the bot through a smooth, real-time chat interface.
